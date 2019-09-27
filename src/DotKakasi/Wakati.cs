@@ -1,6 +1,6 @@
 namespace DotKakasi
 {
-    public class Properties
+    public class Wakati : Kakasi
     {
         
     }

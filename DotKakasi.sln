@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E54FEBB9-E51
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotKakasi", "src\DotKakasi\DotKakasi.csproj", "{D1F53336-338A-4F8E-AE90-AFCB3E88852D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1ADB3097-8104-4CD9-A16B-7390D0985983}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotKakasi.Tests", "test\DotKakasi.Tests\DotKakasi.Tests.csproj", "{A6A3CB75-E918-42E6-BA33-5BD039B005B1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +36,21 @@ Global
 		{D1F53336-338A-4F8E-AE90-AFCB3E88852D}.Release|x64.Build.0 = Release|Any CPU
 		{D1F53336-338A-4F8E-AE90-AFCB3E88852D}.Release|x86.ActiveCfg = Release|Any CPU
 		{D1F53336-338A-4F8E-AE90-AFCB3E88852D}.Release|x86.Build.0 = Release|Any CPU
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1}.Debug|x64.Build.0 = Debug|Any CPU
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1}.Debug|x86.Build.0 = Debug|Any CPU
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1}.Release|x64.ActiveCfg = Release|Any CPU
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1}.Release|x64.Build.0 = Release|Any CPU
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1}.Release|x86.ActiveCfg = Release|Any CPU
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{D1F53336-338A-4F8E-AE90-AFCB3E88852D} = {E54FEBB9-E515-4A37-ADE4-59EFA11BCA91}
+		{A6A3CB75-E918-42E6-BA33-5BD039B005B1} = {1ADB3097-8104-4CD9-A16B-7390D0985983}
 	EndGlobalSection
 EndGlobal
