@@ -1,7 +1,54 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
+  <PropertyGroup Condition=" '$(OS)' != 'Windows_NT' ">
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(OS)' == 'Windows_NT' ">
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <authors>codeyu</authors>
+    <AssemblyName>DotKakasi</AssemblyName>
+    <PackageId>DotKakasi</PackageId>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
+    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Copyright>Copyright 2019 © codeyu</Copyright>
+    <title>.NET Kakasi</title>
+    <owners>codeyu</owners>
+    <Description>Convert Japanese Kana-kanji sentences into Kana-Roman in simple algorithm.</Description>
+    <PackageTags>Kakasi Kanji Roman</PackageTags>
+    <PackageReleaseNotes>
+      1.0.0
+      - init release.
+    </PackageReleaseNotes>
+    <PackageLicense>https://github.com/codeyu/DotKakasi/master/LICENSE</PackageLicense>
+    <PackageProjectUrl>https://github.com/codeyu/DotKakasi</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/codeyu/DotKakasi</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' OR '$(TargetFramework)' == 'net451' OR '$(TargetFramework)' == 'net452' ">
+    <Reference Include="System.ValueTuple" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="_gz\*.gz" />
+   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
+  </ItemGroup>
 
 </Project>

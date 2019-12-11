@@ -1,4 +1,4 @@
-namespace DotKakasi.Properties
+namespace DotKakasi.Common
 {
     public class Configurations
     {

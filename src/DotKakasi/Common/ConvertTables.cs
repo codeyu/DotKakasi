@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-namespace DotKakasi.Properties
+namespace DotKakasi.Common
 {
     public class ConvertTables
     {
