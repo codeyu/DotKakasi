@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 namespace DotKakasi.Common
 {
-    public class ConvertTables
+    public static class ConvertTables
     {
         /*
         convert symbols to alphabet
@@ -48,28 +48,28 @@ namespace DotKakasi.Common
         // U3000 - 301F
     // \u3000、。〃〄〇〆々〈〉《》「」『』【】〒〓〔〕〖〗〘〙
     // 〚〛〜〝〞〟〠
-    public string[] symbol_table_1 = new string[]{" ", ",", ".", "\"", "(kigou)", "(kurikaesi)", "(sime)", "(maru)", "<", ">",
+    public static string[] symbol_table_1 => new string[]{" ", ",", ".", "\"", "(kigou)", "(kurikaesi)", "(sime)", "(maru)", "<", ">",
                       "<<", ">>", "(", ")", "(", ")", "(", ")", "(kigou)", "(geta)",
                       "(", ")", "(", ")", "(", ")", "(", ")", "~", "(kigou)", "\\\"",
                       "(kigou)", "(kigou)"};
     // U3030 - 3040
     // 〰〱〲〳〴〵〶〷〼〽〾〿
-    public string[] symbol_table_2 = new string[]{"-", "(kurikaesi)",
+    public static string[] symbol_table_2 => new string[]{"-", "(kurikaesi)",
                       "(kurikaesi)", "(kurikaesi)", "(kurikaesi)", "(kurikaesi)",
                       "(kigou)", "XX", null, null, null, null, "(masu)", "(kurikaesi)", " ", " "};
     // U0391-03A9
-    public string[] symbol_table_3 = new string[]{"Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta",
+    public static string[] symbol_table_3 => new string[]{"Alpha", "Beta", "Gamma", "Delta", "Epsilon", "Zeta", "Eta", "Theta",
                       "Iota", "Kappa", "Lambda", "Mu", "Nu", "Xi", "Omicron", "Pi", "Rho", null,
                       "Sigma", "Tau", "Upsilon", "Phi", "Chi", "Psi", "Omega"};
     // U03B1-03C9
-    public string[] symbol_table_4 = new string[]{"alpha", "beta", "gamma", "delta", "epsilon", "zeta", "eta", "theta",
+    public static string[] symbol_table_4 => new string[]{"alpha", "beta", "gamma", "delta", "epsilon", "zeta", "eta", "theta",
                       "iota", "kappa", "lambda", "mu", "nu", "xi", "omicron", "pi", "rho", "final sigma",
                       "sigma", "tau", "upsilon", "phi", "chi", "psi", "omega"};
     // UFF01-FF0F
-    public string[] symbol_table_5 = new string[]{"!", "\"", "//", "$", "%", "&", "'", "(", ")", "*", "+",
+    public static string[] symbol_table_5 => new string[]{"!", "\"", "//", "$", "%", "&", "'", "(", ")", "*", "+",
                       ",", "-", ".", "/"};
     // cyriilic
-    public Dictionary<string,string> cyrillic_table = new Dictionary<string, string>{  // basic cyrillic characters
+    public static Dictionary<string,string> cyrillic_table => new Dictionary<string, string>{  // basic cyrillic characters
         {"\u0410", "A"}, {"\u0411", "B"}, {"\u0412", "V"},  // АБВ
         {"\u0413", "G"}, {"\u0414", "D"}, {"\u0415", "E"},  // ГДЕ
         {"\u0401", "E"}, {"\u0416", "Zh"}, {"\u0417", "Z"},  // ЁЖЗ
@@ -94,14 +94,14 @@ namespace DotKakasi.Common
         {"\u044d", "e"}, {"\u044e", "yu"}, {"\u044f", "ya"}  // эюя
     };
 
-    public string[] alpha_table_1 = new string[]{"\u3000", "\uff01", "\uff02", "\uff03", "\uff04", "\uff05", "\uff06",
-                     "\uff07", "\uff08", "\uff09", "\uff0a", "\uff0b", "\uff0c", "\uff0d",
-                     "\uff0e", "\uff0f",  // ！＂＃＄％＆＇（）＊＋，－．／
-                     "\uff10", "\uff11", "\uff12", "\uff13", "\uff14", "\uff15", "\uff16",
-                     "\uff17", "\uff18", "\uff19",  // ０...９
-                     "\uff1a", "\uff1b", "\uff1c", "\uff1d",
-                     "\uff1e", "\uff1f", "\uff20"};  // ：；＜＝＞？＠
-    public string[] alpha_table_2 = new string[]{"\uff3b", "\uff3c", "\uff3d", "\uff3e", "\uff3f", "\uff40"};  // ［＼］＾＿｀
-    public string[] alpha_table_3 = new string[]{"\uff5b", "\uff5c", "\uff5d", "\uff5e"}; // ｛｜｝～
+    public static char[] alpha_table_1 => new char[]{'\u3000', '\uff01', '\uff02', '\uff03', '\uff04', '\uff05', '\uff06',
+                     '\uff07', '\uff08', '\uff09', '\uff0a', '\uff0b', '\uff0c', '\uff0d',
+                     '\uff0e', '\uff0f',  // ！＂＃＄％＆＇（）＊＋，－．／
+                     '\uff10', '\uff11', '\uff12', '\uff13', '\uff14', '\uff15', '\uff16',
+                     '\uff17', '\uff18', '\uff19',  // ０...９
+                     '\uff1a', '\uff1b', '\uff1c', '\uff1d',
+                     '\uff1e', '\uff1f', '\uff20'};  // ：；＜＝＞？＠
+    public static char[] alpha_table_2 => new char[]{'\uff3b', '\uff3c', '\uff3d', '\uff3e', '\uff3f', '\uff40' };  // ［＼］＾＿｀
+    public static char[] alpha_table_3 => new char[]{ '\uff5b', '\uff5c', '\uff5d', '\uff5e' }; // ｛｜｝～
     }
 }
