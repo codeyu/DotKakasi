@@ -15,17 +15,7 @@ namespace DotKakasi.Kanji
         private readonly Dictionary<char, char> _itaijidict;
         private Itaiji()
         {
-            var fileName = $"DotKakasi._gz.itaijidict.json.gz";
-            var assembly = typeof(Itaiji).GetTypeInfo().Assembly;
-            using (var resource = assembly.GetManifestResourceStream(fileName))
-            using (GZipStream decompressionStream = new GZipStream(resource, CompressionMode.Decompress))
-            {
-                using (StreamReader textReader = new StreamReader(decompressionStream))
-                {
-                    var json = textReader.ReadToEnd();
-                    _itaijidict = JsonConvert.DeserializeObject<Dictionary<char, char>>(json);
-                }
-            }
+            _itaijidict = JisyoFactory.Load(Configurations.jisyo_itaiji);
         }
 
         public bool HasKey(char key)
