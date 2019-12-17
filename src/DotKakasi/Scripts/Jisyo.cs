@@ -1,9 +1,6 @@
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.IO.Compression;
-using System.Reflection;
+
 
 namespace DotKakasi.Scripts
 {
@@ -13,17 +10,7 @@ namespace DotKakasi.Scripts
 
         public Jisyo(string dictName)
         {
-            var fileName = $"DotKakasi._gz.{dictName}";
-            var assembly = typeof(Jisyo).GetTypeInfo().Assembly;
-            using (var resource = assembly.GetManifestResourceStream(fileName))
-            using (GZipStream decompressionStream = new GZipStream(resource, CompressionMode.Decompress))
-            {
-                using (StreamReader textReader = new StreamReader(decompressionStream))
-                {
-                    var json = textReader.ReadToEnd();
-                    _dict = JsonConvert.DeserializeObject<Dictionary<string, string>>(json);
-                }
-            }
+            _dict = JisyoFactory.Load(dictName);
         }
         public bool haskey(string key)
         {
